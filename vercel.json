@@ -1,0 +1,17 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install",
+  "regions": ["iad1"],
+  "functions": {
+    "app/api/discuss/route.ts": {
+      "runtime": "edge",
+      "memory": 256,
+      "maxDuration": 30
+    }
+  },
+  "env": {
+    "OPENROUTER_API_KEY": "@openrouter_api_key"
+  }
+}
